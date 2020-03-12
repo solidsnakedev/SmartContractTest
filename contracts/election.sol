@@ -1,4 +1,4 @@
-pragma solidity  ^0.5.16;
+pragma solidity >=0.4.25 <0.6.0;
 
 contract election{
 	//Store candidate
@@ -6,9 +6,19 @@ contract election{
 	//Constructor
 	string public candidate;
 
+	uint public someValue;
+
 	constructor() public{
 		candidate = "Candidate";
 	}
 
+
+  	function beforeEach() public{
+    someValue = 5;
+  	}
+
+	function beforeEachAgain() public{
+    someValue += 1;
+  	}
 
 }
